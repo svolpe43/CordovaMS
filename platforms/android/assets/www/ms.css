@@ -1,0 +1,193 @@
+@import url(fonts/clear-sans.css);
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif !important;
+	text-align: center;
+}
+
+#wrapper{
+	width: 90%;
+	overflow: hidden;
+	margin: 30px auto;
+}
+
+#wrapper h3{
+	margin: 3px !important;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+#top{
+	display: inline-block;
+}
+
+#left{
+	display: inline-block;
+	float: left;
+}
+
+#game-container{
+	padding: 15px;
+	background: #bfbfd7;
+	border-radius: 6px;
+	display: inline-block;
+	overflow: hidden;
+	height: 295px;
+	position: relative;
+}
+
+.game-message{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(255, 255 ,255,0.5);
+	display: none;
+	z-index: 1000;
+}
+
+#game-over{
+	margin-top: 100px;
+	text-align: center;
+	opacity: 1;
+}
+
+#game-over h3{
+	font-size: 25px;
+	font-weight: bold;
+}
+
+#score{
+	float: right;
+	text-align: center;
+	margin-top: 10px;
+	border-radius: 5px;
+	background: #bfbfd7;
+	padding: 5px 5px;
+	color: #36367A;
+}
+
+#score h4{
+	margin: 0 !important;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#score h5{
+	font-size: 15px;
+	margin: 5px;
+}
+
+.styled-select {
+	width: 100px;
+	height: 34px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.styled-select select {
+	background: transparent;
+	width: 268px;
+	padding: 5px;
+	font-size: 16px;
+	line-height: 1;
+	border: 0;
+	border-radius: 2;
+	height: 34px;
+	-webkit-appearance: none;
+}
+
+.default-btn{
+	color: #000000;
+	font-size: 8px;
+	background: #fff;
+}
+
+.default-btn:hover{
+	background-color: #e2e2e2;
+}
+
+.btn {
+	-webkit-border-radius: 9;
+	-moz-border-radius: 9;
+	border-radius: 9px;
+	font-size: 15px !important;
+	font-weight: bold !important;
+	color: #36367A;
+	background: #bfbfd7;
+	padding: 10px 20px 10px 20px;
+}
+
+.btn:hover {
+	color: #ffffff !important;
+	background: #56569A;
+	text-decoration: none;
+}
+
+/*
+ *
+ * Game Container and children css
+ *
+ *
+ */
+#game {
+	position: relative;
+	cursor: default;
+	background: #bfbfd7;
+	border-radius: 6px;
+	display: inline-block;
+}
+
+.game-row{
+	margin-bottom: 5px;
+}
+
+.game-row:last-child{
+	margin-bottom: 0;
+}
+
+.game-cell{
+	float: left;
+	margin-right: 5px;
+	display: table;
+}
+
+.game-cell p{
+	visibility: hidden;
+}
+
+.idle{
+	background-color: #5c5cd6;
+}
+
+.exposed{
+	color: #fff;
+	background-color: #36367A;
+}
+
+.exposed p{
+	visibility: visible;
+}
+
+.flagged{
+	background-color: #008F6B;
+}
+
+.bomb{
+	background-color: #CC0052;
+}
+
+.game-cell p{
+	margin: 0 !important;
+	padding 0 !important;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.game-cell:last-child {
+    margin-right: 0;
+}
+
+
