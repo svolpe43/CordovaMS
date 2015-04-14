@@ -8,7 +8,7 @@ html, body {
 
 #wrapper{
 	width: 90%;
-	overflow: hidden;
+	height: 90%;
 	margin: 30px auto;
 }
 
@@ -33,7 +33,6 @@ html, body {
 	border-radius: 6px;
 	display: inline-block;
 	overflow: hidden;
-	height: 295px;
 	position: relative;
 }
 
@@ -41,19 +40,28 @@ html, body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: rgba(255, 255 ,255,0.5);
+	background-color: rgba(255, 255 ,255, 0.75);
 	display: none;
 	z-index: 1000;
 }
 
-#game-over{
+.game-text{
 	margin-top: 100px;
-	text-align: center;
-	opacity: 1;
 }
 
-#game-over h3{
-	font-size: 25px;
+#instructions{
+	list-style: none !important;
+	width: 90%;
+	margin: 0 auto;
+}
+
+#instructions ul{
+	list-style: none;
+	text-align: left;
+}
+
+#instructions p{
+	font-size: 16px;
 	font-weight: bold;
 }
 
@@ -76,26 +84,6 @@ html, body {
 #score h5{
 	font-size: 15px;
 	margin: 5px;
-}
-
-.styled-select {
-	width: 100px;
-	height: 34px;
-	overflow: hidden;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-}
-
-.styled-select select {
-	background: transparent;
-	width: 268px;
-	padding: 5px;
-	font-size: 16px;
-	line-height: 1;
-	border: 0;
-	border-radius: 2;
-	height: 34px;
-	-webkit-appearance: none;
 }
 
 .default-btn{
@@ -140,7 +128,7 @@ html, body {
 }
 
 .game-row{
-	margin-bottom: 5px;
+	margin-bottom: 2px;
 }
 
 .game-row:last-child{
@@ -149,7 +137,7 @@ html, body {
 
 .game-cell{
 	float: left;
-	margin-right: 5px;
+	margin-right: 2px;
 	display: table;
 }
 
@@ -157,8 +145,14 @@ html, body {
 	visibility: hidden;
 }
 
-.idle{
+.surround-yes{
 	background-color: #5c5cd6;
+
+}
+
+.surround-no{
+	background-color: #ff5cd6;
+
 }
 
 .exposed{

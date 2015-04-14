@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Mine Sweeper</title>
 	<script src="jquery-2.1.3.min.js"></script>
+	<script src="jquery.mobile.custom.min.js"></script>
 	<script src="jquery-ui/jquery-ui.js"></script>
 	<script src="/cookie/jquery.cookie.js"></script>
 	<script src="ms.js"></script>
@@ -18,6 +19,7 @@
 			<div id="left">
 				<h3>Mine Sweeper</h3>
 				<button class="btn" id="start" onclick="reset(2, true)">Restart</button>
+				<button class="btn" id="show-instructions" onclick="instructions()">How To</button>
 			</div>
 			<div id="score">
 				<h5>Bomb Count</h5>
@@ -26,9 +28,22 @@
 		</div>
 		<div id="game-container">
 			<div id="game-message" class="game-message" >
-				<div id="game-over">
+				<div class="game-text" id="game-over">
 					<h3>Game Over</h3>
 					<button class="btn" id="start" onclick="reset(2, true)">New Game</button>
+				</div>
+				<div class="game-text" id="win">
+					<h3>Winner</h3>
+					<button class="btn" id="start" onclick="reset(2, true)">New Game</button>
+				</div>
+				<div class="game-text" id="instructions">
+					<h3>Instructions</h3>
+					<ul>
+						<li><p>- Click on a tile to reveal it but be very careful of bombs.</p></li>
+						<li><p>- The numbers describe the amount of bombs in the 8 tiles surrounding that tile.</p></li>
+						<li><p>- If you think you found a bomb, long press the tile to flag it.</p></li>
+						<li><p>- Reveal all of the tiles without blowing a bomb to win!</p></li>
+					</ul>
 				</div>
 			</div>
 			<div id="game"></div>
